@@ -1,0 +1,24 @@
+package Sampletest.java;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class formsubmission {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\My PC\\Downloads\\drivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/MYPC~1/AppData/Local/Temp/Rar$EXa3964.20002/website/home.html");
+		driver.findElement(By.id("firstName")).sendKeys("Fizz");
+		driver.findElement(By.id("lastName")).sendKeys("Buzz");
+		driver.findElement(By.id("Email")).sendKeys("Fizz_Buzz@hackerrank.com");
+		driver.findElement(By.id("Password")).sendKeys("123456789");
+		driver.findElement(By.id("conformPassword")).sendKeys("123456789)
+		driver.findElement(By.name("register")).click();
+		
+	}
+
+}
